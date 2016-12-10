@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery mgGlitch Plugin Demo</title>
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,900,300' rel='stylesheet' type='text/css'>
+    <!-- Demo styles -->
+    <style>
+        
+        /* glitch elem must have absolute position */
+        .glitch-img {position: absolute; width : 100%; height : 100%; top: 0 ; left : 0; background-position:center;  -moz-background-size:cover;-o-background-size:cover;-webkit-background-size:cover;background-size:cover;
+        } 
+        body {
+    background-color: black;
+}
+
+h1 {
+    background-color: #00ff00;
+}
+
+p {
+    background-color: rgb(0,0,0);
+	color: white;
+	font-size: 70px;
+	text-align:center;
+}
+button{
+
+}
+    </style>
+</head>   
+<body>
+
+
+    <div class="container">
+        <!-- this elem will be glitch -->
+      <div class="glitch-img" ><p> HELLO </p></div>
+    </div>
+
+ 
+    <!-- include jQuery -->
+    <script
+	    src="https://code.jquery.com/jquery-3.0.0.min.js">
+    </script>
+
+    <!-- include plugin src -->
+    <script src="../src/mgGlitch.min.js"></script>
+    
+    <!-- active plugin -->
+    <script>
+	$( function() {
+		$( ".glitch-img" ).mgGlitch({
+			destroy : false, // set 'true' to stop the plugin
+                        glitch: true, // set 'false' to stop glitching
+                        scale: true, // set 'false' to stop scaling
+                        blend : true, // set 'false' to stop glitch blending
+                        blendModeType : 'hue', // select blend mode type
+                        glitch1TimeMin : 600, // set min time for glitch 1 elem
+                        glitch1TimeMax : 900, // set max time for glitch 1 elem
+                        glitch2TimeMin : 10, // set min time for glitch 2 elem
+                        glitch2TimeMax : 115, // set max time for glitch 2 elem
+		});
+	});
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
